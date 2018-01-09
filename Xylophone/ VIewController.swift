@@ -23,7 +23,8 @@ class ViewController: UIViewController{
 
 
     @IBAction func notePressed(_ sender: UIButton) {
-        let note1Url =  Bundle.main.url(forResource: "note1", withExtension: "wav")!
+        var buttonPressedTag: Int = sender.tag
+        let note1Url =  Bundle.main.url(forResource: "note\(buttonPressedTag)", withExtension: "wav")!
         
         do {
             player = try AVAudioPlayer(contentsOf: note1Url)
