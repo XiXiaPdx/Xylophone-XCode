@@ -72,6 +72,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QG2-EG-XmS" firstAttribute="top" secondItem="jAj-d0-19d" secondAttribute="bottom" constant="8" id="9aZ-pm-743"/>
                             <constraint firstItem="cmn-i5-Ti5" firstAttribute="height" secondItem="0nu-A8-mkT" secondAttribute="height" id="9ts-qb-NhA"/>
@@ -102,9 +103,17 @@
                             <constraint firstItem="QG2-EG-XmS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="kLB-ns-Gwg"/>
                             <constraint firstItem="jEL-en-4rE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="txB-gT-hOH"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1oo-xn-Gkv" appends="YES" id="gOT-Nv-1CH"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1oo-xn-Gkv">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="teZ-mf-V2q"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="162" y="366"/>
         </scene>
