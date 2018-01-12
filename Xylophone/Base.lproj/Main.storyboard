@@ -25,7 +25,8 @@
                                 <rect key="frame" x="5" y="28" width="365" height="84"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="7qo-te-IJr"/>
+                                    <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hUa-oa-OOJ"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5S-5r-gBr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YE-I3-mym" userLabel="Key2">
@@ -33,6 +34,7 @@
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="wkz-1t-WFI"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXu-cb-Ff3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXG-hm-s2J" userLabel="Key3">
@@ -40,6 +42,7 @@
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.76862745098039209" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="aGu-W2-d1g"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JW-Pi-LPr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-d0-19d" userLabel="Key4">
@@ -47,6 +50,7 @@
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dO7-uY-ADY"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vW1-X6-hK2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG2-EG-XmS" userLabel="Key5">
@@ -54,6 +58,7 @@
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hWR-AO-Lau"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpu-Ir-JUi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEL-en-4rE" userLabel="Key6">
@@ -61,6 +66,7 @@
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="XZO-pX-igf"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDM-Jv-Oqx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-i5-Ti5" userLabel="Key7">
@@ -68,6 +74,7 @@
                                 <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="pWc-D5-per"/>
+                                    <action selector="touchEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIS-cO-dMo"/>
                                 </connections>
                             </button>
                         </subviews>

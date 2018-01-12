@@ -13,11 +13,6 @@ import AudioToolbox.AudioServices
 
 class ViewController: UIViewController{
     
-    // Grab the path, make sure to add it to your project!
- 
-    // this is for solution using note1Url
-//    var player: AVAudioPlayer?
-    
     // last button touched
     var lastButtonTouched: Int = 0
 
@@ -25,33 +20,41 @@ class ViewController: UIViewController{
         super.viewDidLoad()
     }
     
+    // The following action is for dragging finger across keys
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        
         let point: CGPoint = recognizer.location(in: self.view)
 
         if let button: UIButton = self.view.hitTest(point, with: nil) as? UIButton {
-    
             let buttonPressedTag: Int = button.tag
             
             //check that touch is dragged onto a different button to play sound.
             if lastButtonTouched != buttonPressedTag{
+                fadeButton(ofThisButton: button)
             playSound(ofButtonTagNumber: buttonPressedTag)
                 lastButtonTouched = buttonPressedTag
+            } else {
+                unFadeButton(ofThisButton: button)
             }
         }
     }
     
-    
     @IBAction func notePressed(_ sender: UIButton) {
-        
+
         let buttonPressedTag: Int = sender.tag
-        
+
         //when finger is dragged on initial key, this prevents the note from being played twice
         lastButtonTouched = buttonPressedTag
-        
+        fadeButton(ofThisButton: sender)
         playSound(ofButtonTagNumber: buttonPressedTag)
-
     }
     
+    //This action is to detect touch up so button opacity is restored to full
+    @IBAction func touchEnd(_ sender: UIButton) {
+        unFadeButton(ofThisButton: sender)
+    }
+    
+    //This function plays the sound of the button
     func playSound(ofButtonTagNumber buttonTag: Int){
         if let soundURL = Bundle.main.url(forResource: "note\(buttonTag)", withExtension: "wav") {
             var mySound: SystemSoundID = 0
@@ -61,5 +64,14 @@ class ViewController: UIViewController{
         }
     }
     
+    //This fades the button
+    func fadeButton(ofThisButton button: UIButton){
+        button.alpha=0.5
+    }
+    
+    //this unFades the button
+    func unFadeButton(ofThisButton button: UIButton){
+        button.alpha=1.0
+    }
 }
 
